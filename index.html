@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Website-Bulma</title>
+    <link rel="icon" href="img/Layer 0.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+    rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="bulma-extensions/bulma-staps/css/bulma-steps.min.css">
+    <script src="bulma-extensions/bulma-staps/js/bulma-steps.js"></script>
+
+    <link rel="stylesheet" href="js/progress.js/minified/progressjs.min.css">
+    <script src="js/progress.js/minified/progress.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<!-- start of navbar -->
+<nav class="navbar is-fixed-top is-black" role="navigation" aria-label="main navigation"
+x-data="initNavbar()" x-on:scroll.window="scroll()" id="navbar-clone" class="navbar is-fixed">
+    <div class="container">
+        <div class="navbar-brand">
+            <div class="logo">
+                <h1 class="title is-4 is-uppercase has-text-white">
+                <img src="img/Layer 0.png" width="80">
+                bitcoin</h1>
+            </div>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end is-uppercase">
+            <a href="#" class="navbar-item">token</a>
+            <a href="#" class="navbar-item">ico</a>
+            <a href="Roadmap.html" target="_blank" class="navbar-item">roadmap</a>
+            <a href="Media.html" target="_blank" class="navbar-item">media</a>
+            <a href="#" class="navbar-item">
+                <i class="fa-solid fa-paper-plane pr-1"></i>
+                telegram</a>  
+    
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-responsive" id="openModal">
+                    <span class="text">register</span>
+                    <span class="btn-box"></span>
+                </a>
+                <div class="modal">
+                    <div class="modal-background"></div> <!-- This Background opacity -->
+                    <div class="modal-card animate__animated animate__zoomIn">
+                        <video autoplay muted loop id="back-video">
+                            <source src="Video/Video_.mp4" type="video/mp4">
+                        </video>
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Modal title</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                    <!-- Content ... -->
+                    <div class="steps" id="stepsDemo">
+                        <div class="step-item is-active is-info">
+                            <div class="step-marker">1</div>
+                                <div class="step-details">
+                                    <p class="step-title">Account</p>
+                                </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">3</div>
+                            <div class="step-details">
+                            <p class="step-title">Social</p>
+                            </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">4</div>
+                            <div class="step-details">
+                            <p class="step-title">Finish</p>
+                            </div>
+                        </div>
+                        <div class="steps-content">
+                            <div class="step-content has-text-centered is-active">
+                                <div class="field is-horizontal">
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                            <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control has-icon has-icon-right">
+                                            <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                                <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control social-icon">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <i class="fa-brands fa-telegram"></i>
+                                                <i class="fa-brands fa-twitter"></i>
+                                                <i class="fa-brands fa-github"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                                <h1 class="title is-4 has-text-white py-6">Your account is now created!</h1>
+                            </div>
+                        </div>
+                        <div class="steps-actions">
+                            <div class="steps-action">
+                                <a href="#" data-nav="previous" id="previous" class="button is-light is-responsive is-rounded">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                    Previous</a>
+                            </div>
+                            <div class="steps-action">
+                                <a href="#" data-nav="next" id="next" class="button is-light is-responsive is-rounded">Next
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <a  href="Error page/index.html" target="_blank">
+                            <button class="button is-success is-responsive">Save changes</button></a> 
+                        <button class="button modal-btn is-responsive ml-3" id="cancel">Cancel</button>
+                    </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</nav>
+<!-- End of navbar -->
+
+<script>
+    $('#openModal').click(function(){
+        $('.modal').addClass('is-active');
+    })
+
+    $('.delete').click(function(){
+        $('.modal').removeClass('is-active');
+    })
+    $('#cancel').click(function(){
+        $('.modal').removeClass('is-active');
+    })
+    $('.modal-background').click(function () {
+        $('.modal').removeClass('is-active')
+    })
+
+    bulmaSteps.attach();
+</script>
+
+
+<!--! particles js files -->
+<section class="back">
+    <div id="particles-js"></div>
+        <script src="js/particles/particles.js"></script>
+        <script src="js/particles/app.js"></script> 
+</section>
+<!--! particles js files -->
+
+<!-- Start of hero section -->
+<section class="hero is-fullheight-with-navbar py-6 is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-5-desktop is-offset-1"  data-aos="zoom-in-right" data-aos-duration="1900">
+                    <h1 class="title is-1 has-text-white">
+                        Cryptocurrency Exchange Market
+                    </h1>
+                    <p class="subtitle pt-3 pr-6 is-6 has-text-grey-light subtitle-hero-main">
+                        Cryptocurrency brought to the next level. Join our ICO for supercharged rates.
+                        Cryptocurrency brought to the next level. Join our ICO for supercharged rates.
+                    </p>
+                    <div class="buttons">
+                        <button class="button is-responsive button-hero-sec" data-aos="zoom-in-left" data-aos-duration="1900">Get Started</button>
+                        <button class="button is-responsive button-hero-sec"   data-aos="zoom-in-right" data-aos-duration="1900">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="column ">
+                    <img src="img/main/buildings.svg" alt="img-1" class="img" data-aos="zoom-in-left" data-aos-duration="1900">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-foot">
+        <nav class="tabs is-boxed is-centered">
+            <div class="container">
+            <ul>
+                <li class="pl-5"> <img src="img/clients/bitit.svg" data-aos="zoom-in" data-aos-duration="2000" width="160" alt="img-c"></li>
+                <li class="pl-5"> <img src="img/clients/coin.svg" data-aos="zoom-in" data-aos-duration="2000" width="160" alt="img-c"></li>
+                <li class="pl-5"> <img src="img/clients/cryptomarket.svg" data-aos="zoom-in" data-aos-duration="2000" width="160" alt="img-c"></li>
+            </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+<!-- End of hero section -->
+
+<!-- start of Element sction -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="buttons is-centered">
+                    <a class="button is-rounded is-responsive is-uppercase btncenter">buy tokens 20% off</a>
+                </div>
+                <p class="subtitle is-uppercase is-6 has-text-grey-light has-text-centered">we accept</p>
+                <div class="icons has-text-grey-light has-text-centered">
+                    <i class="fa-solid fa-bitcoin-sign ml-4"></i>
+                    <i class="fa-brands fa-ethereum ml-4"></i>
+                    <i class="fa-solid fa-bolt ml-4"></i>
+                    <i class="fa-solid fa-bitcoin-sign ml-4"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Element sction -->
+
+<!-- start of feature section -->
+<section class="section  feature">
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column is-4-desktop has-text-centered">
+                <img src="img/feature/chained.svg" class="feature-icon" alt="f-1" width="80">
+                <h1 class="title is-5 has-text-white">Chaining</h1>
+                <p class="subtitle pt-3">Supercharged features to make you happy and lorem ipsum sit dolor amet</p>
+            </div>
+            <div class="column is-4-desktop has-text-centered">
+                <img src="img/feature/stacked.svg" class="feature-icon" alt="f-1" width="80">
+                <h1 class="title is-5 has-text-white">Stacking</h1>
+                <p class="subtitle pt-3">Supercharged features to make you happy and lorem ipsum sit dolor amet</p>
+            </div>
+            <div class="column is-4-desktop has-text-centered">
+                <img src="img/feature/compact.svg" class="feature-icon" alt="f-1" width="80">
+                <h1 class="title is-5 has-text-white">Managing</h1>
+                <p class="subtitle pt-3">Supercharged features to make you happy and lorem ipsum sit dolor amet</p>
+            </div>
+            <div class="column is-12-desktop">
+                <div class="buttons is-centered mt-5">
+                    <button class="button is-responsive icon">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of feature section -->
+
+
+<!-- start of Exchange section -->
+<section class="section mt-6 txt-center">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-12-desktop">
+                <h1 class="title is-3 has-text-white has-text-centered">Decentralized Exchange</h1>
+                <div class="column is-6-desktop">
+                    <p class="subtitle has-text-centered">
+                        Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Exchange section -->
+
+
+<!-- start of Token section -->
+<section>
+    <div class="container is-centered px-5">
+        <div class="columns is-vcentered">
+            <div class="column is-5-desktop mr-6 is-offset-1" data-aos="fade-right" data-aos-duration="1500">
+                <h1 class="title is-3 has-text-white icon-h1">
+                    <img src="img/icon/bitbanner.svg" alt="icon-1" width="50" class="pr-1">
+                    Token Building
+                </h1>
+                <p class="subtitle pt-1 txt-p">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.
+                </p>
+                <button class="button is-responsive btn">Learn More</button>
+            </div>
+            <div class="column" data-aos="fade-left" data-aos-duration="1500">
+                <img src="img/main/token.svg" alt="m-1" width="550">
+            </div>
+        </div>
+
+        <div class="columns is-vcentered mt-5">
+            <div class="column is-6-desktop mr-6" data-aos="fade-left" data-aos-duration="1500">
+                <img src="img/main/blockchain-blocks.svg" alt="m-2">
+            </div>
+            <div class="column is-5-desktop" data-aos="fade-right" data-aos-duration="1500">
+                <h1 class="title is-3 has-text-white icon-h1">
+                    <img src="img/icon/bitnetwork.svg" alt="icon-2" width="50" class="pr-2">
+                    Cascading Blockchain
+                </h1>
+                <p class="subtitle pt-1 txt-p">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.
+                </p>
+                <button class="button is-responsive btn">Learn More</button>
+            </div>
+        </div>
+
+        <div class="columns is-vcentered mt-5">
+            <div class="column is-5-desktop is-offset-1 icon-h1" data-aos="fade-right" data-aos-duration="1500">
+                <h1 class="title is-3 has-text-white">
+                    <img src="img/icon/bitmining.svg" alt="icon-3" width="50" class="pr-1">
+                    Crypto Farming
+                </h1>
+                <p class="subtitle pt-1 txt-p">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.
+                </p>
+                <button class="button is-responsive btn">Learn More</button>
+            </div>
+            <div class="column is-5-desktop ml-6" data-aos="fade-left" data-aos-duration="1500">
+                <img src="img/main/crypto-mining.svg" alt="m-2">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Token section -->
+
+<!-- ! start of Join Ico section -->
+<section class="section txt-center background-sec">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-6-desktop">
+                <h1 class="title is-3 has-text-white has-text-centered">Join our ICO Now</h1>
+                <p class="subtitle has-text-centered pt-3 is-6">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.                   
+                </p>
+            </div>
+        </div>
+        <div class="columns is-centered mt-6">
+            <div class="hero-foot">
+                <nav class="tabs tab-bar is-fullwidth">
+                    <div class="container">
+                        <ul class="tab-info">
+                            <li class="tab is-active mx-6 is-6 slider" onclick="openTab(event,'ICO')"><a>ICO</a></li>
+                            <li class="tab mx-6 is-6" onclick="openTab(event,'Token')"><a>TOKEN</a></li>
+                            <li class="tab mx-6 is-6" onclick="openTab(event,'Profit')"><a>PROFIT</a></li>
+                            <li class="tab mx-6 is-6" onclick="openTab(event,'Bounty')"><a>BOUNTY</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- start of Content Join Ico section -->
+<section class="section txt-center background-sec is-vcentered">
+    <div class="container">
+        <div id="ICO" class="content-tab">
+            <div class="columns is-centered">
+                <div class="column is-4-desktop mb-6 is-offset-1 animate__animated animate__fadeInLeft animate__slow">
+                    <h2 class="title is-4 is-uppercase has-text-white">ico trems</h2>
+                        <ul class="tab-1">
+                            <li>Presale</li>
+                            <p class="txt-center">Presale starts on Apr 8 2021 (9:00am GMT)</p>
+
+                            <li>Sale</li>
+                            <p class="txt-center">Token Sale on Apr 8 2021 (9:00am GMT)</p>
+                            
+                            <li>Bonus</li>
+                            <p class="txt-center">Bouns starts on Apr 8 2021 (9:00am GMT)</p>
+                        </ul>
+                    </div>
+                    <div class="column is-5-desktop animate__animated animate__fadeInRight animate__slow">
+                        <div class="card date-card">
+                            <div id="clock">
+                                <div id="days">340</div>
+                                <div id="hours">00</div>
+                                <div id="minutes">00</div>
+                                <div id="seconds">00</div>
+                            </div>
+                        <div class="progress-block">
+                            <div class="txt-progress">presale</div>
+                            <div class="txt-progress">softcap</div>
+                            <div class="txt-progress">bonus</div>
+                            <progress class="progress is-info my-4" value="45" max="100">45%</progress>
+                        </div>
+                        <div class="buttons">
+                            <button class="button btn-card is-responsive is-rounded is-uppercase">join the ico now</button>
+                        </div>
+                        <div class="icons-card">
+                            <i class="fa-brands fa-ethereum has-text-centered ml-4"></i>
+                            <i class="fa-solid fa-bolt has-text-centered ml-4"></i>
+                            <i class="fa-solid fa-bitcoin-sign has-text-centered ml-4"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"><!-- Display none to hidden container  -->
+            <div id="Token" class="content-tab"  style="display:none;">
+                <div class="columns is-centered">
+                    <div class="column is-4-desktop is-offset-1 animate__animated animate__fadeInLeft animate__slow">
+                        <h2 class="title is-4 is-uppercase has-text-white">TOKEN RATES</h2>
+                            <ul class="tab-1">
+                                <li>Tokens Sales</li>
+                                <p class="txt-center">1 200 000 KP (22%)</p>
+    
+                                <li>Token Exchange</li>
+                                <p class="txt-center">1 BTC = 2200 KP, 1 ETH = 825 KP</p>
+                                
+                                <li>Transations</li>
+                                <p class="txt-center">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</p>
+                            </ul>
+                        </div>
+                        <div class="column is-5-desktop animate__animated animate__fadeInRight animate__slow">
+                            <img src="img/join our/tokens.svg" alt="j-1" width="335">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container"> <!-- Display none to hidden container  -->
+            <div id="Profit" class="content-tab"  style="display:none;"> 
+                <div class="columns is-centered">
+                    <div class="column is-4-desktop is-offset-1 animate__animated animate__fadeInLeft animate__slow">
+                        <h2 class="title is-4 is-uppercase has-text-white">Profit</h2>
+                            <ul class="tab-1">
+                                <li>Tokens Sales</li>
+                                <p class="txt-center">1 200 000 KP (22%)</p>
+    
+                                <li>Token Exchange</li>
+                                <p class="txt-center">1 BTC = 2200 KP, 1 ETH = 825 KP
+                                </p>
+                                
+                                <li>Transations</li>
+                                <p class="txt-center">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</p>
+                            </ul>
+                        </div>
+                        <div class="column is-5-desktop animate__animated animate__fadeInRight animate__slow">
+                            <img src="img/join our/charts.svg" alt="j-1" width="335">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"> <!-- Display none to hidden container  -->
+            <div id="Bounty" class="content-tab"  style="display:none;"> 
+                <div class="columns is-centered">
+                    <div class="column is-4-desktop is-offset-1 animate__animated animate__fadeInLeft animate__slow">
+                        <h2 class="title is-4 is-uppercase has-text-white">REWARDS & BOUNTIES</h2>
+                            <ul class="tab-1">
+                                <li>Tokens Sales</li>
+                                <p class="txt-center">1 200 000 KP (22%)</p>
+    
+                                <li>Token Exchange</li>
+                                <p class="txt-center">1 BTC = 2200 KP, 1 ETH = 825 KP</p>
+                                
+                                <li>Transations</li>
+                                <p class="txt-center">Minimal transaction amount is 1 BTC, 1 ETH, 1 LTC</p>
+                            </ul>
+                        </div>
+                        <div class="column is-5-desktop animate__animated animate__fadeInRight animate__slow">
+                            <img src="img/join our/bounty.svg" alt="j-1" width="335">
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<!-- ! end of Join Ico section -->
+
+<!-- start of Live Tracking section -->
+<section class="section is-medium txt-center">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6-desktop">
+                <h1 class="title is-3 has-text-centered has-text-white">Live Tracking</h1>
+                <p class="subtitle has-text-centered mt-3">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.
+                </p>
+            </div>
+        </div>
+        <div class="columns mt-5">
+            <div class="column is-6-desktop" data-aos="fade-right" data-aos-duration="900">
+                <h2 class="title is-3 has-text-white">
+                    <img src="img/icon/bitnetwork.svg" alt="icon-2" width="40" class="pr-2">
+                    Track everything with the App
+                </h2>
+                <p class="subtitle txt-p mt-3">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Eu impetus perfecto sit, no sea labore detraxit.
+                </p>
+                <a href="Error page/index-3.html" target="_blank">
+                    <button class="button btn is-responsive" data-aos="fade-down" data-aos-easing="linear"
+                    data-aos-duration="900">Download App</button>
+                </a>
+            </div>
+            <div class="column is-6-desktop mt-5" data-aos="fade-left" data-aos-duration="900">
+                <img src="img/main/krypton-app.svg" alt="m-5" width="450">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Live Tracking section -->
+
+<!--! start of Our Team section -->
+<section class="section is-medium background-sec txt-center content-wrapper">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-centered is-6-desktop">
+                <h1 class="title is-3 has-text-centered has-text-white">Our Team</h1>
+                <p class="subtitle mt-3 has-text-centered">
+                    Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.
+                </p>
+            </div>
+        </div>
+
+    <div class="columns is-centered mt-3 px-5 content-wrapper is-large">
+        <div class="column is-3-desktop is-centered">
+            <div class="card team-member-container" data-aos="flip-left" data-aos-duration="2000">
+
+                <div class="card-img">
+                    <img src="img/team-line/john.svg" alt="line-img" class="is-sketch">
+                    <img src="img/team/john.jpg" alt="av-img" class="is-real">
+                </div>
+                <div class="card-content">
+                    <h2 class="title is-4 has-text-centered has-text-white">John Cambell
+                    </h2>
+                    <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                    <p class="txt-center">
+                        John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="column is-3-desktop is-centered ">
+                <div class="card team-member-container" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img src="img/team-line/mike.svg" alt="line-img" class="is-sketch">
+                        <img src="img/team/mike.jpg" alt="av-img" class="is-real">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="title is-4 has-text-centered has-text-white">Joshua Stevens</h2>
+                        <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                        <p class="txt-center">
+                            John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3-desktop is-centered">
+                <div class="card team-member-container" data-aos="flip-left" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img src="img/team-line/sandra.svg" alt="line-img" class="is-sketch">
+                        <img src="img/team/sandra.jpg" alt="av-img" class="is-real">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="title is-4 has-text-centered has-text-white">Sara Jackson</h2>
+                        <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                        <p class="txt-center">
+                            John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns is-centered mt-3 px-5">
+            <div class="column is-3-desktop is-centered">
+                <div class="card team-member-container" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img src="img/team-line/lucy.svg" alt="line-img" class="is-sketch">
+                        <img src="img/team/lucy.jpg" alt="av-img" class="is-real">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="title is-4 has-text-centered has-text-white">Lucy Wong</h2>
+                        <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                        <p class="txt-center">
+                            John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-3-desktop is-centered">
+                <div class="card team-member-container" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img src="img/team-line/john.svg" alt="line-img" class="is-sketch">
+                        <img src="img/team/john.jpg" alt="av-img" class="is-real">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="title is-4 has-text-centered has-text-white">John Cambell</h2>
+                        <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                        <p class="txt-center">
+                            John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>          
+            <div class="column is-3-desktop is-centered">
+                <div class="card team-member-container" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="card-img">
+                        <img src="img/team-line/lucy.svg" alt="line-img" class="is-sketch">
+                        <img src="img/team/lucy.jpg" alt="av-img" class="is-real">
+                    </div>
+                    <div class="card-content">
+                        <h2 class="title is-4 has-text-centered has-text-white">Lucy Wong</h2>
+                        <h4 class="subtitle is-6 has-text-centered has-text-grey is-uppercase">Founder/ceo</h4>
+                        <p class="txt-center">
+                            John is a Crypto enthusiast. He was one of the first bolckchain actors in the world.
+                        </p>
+                    </div>
+                </div>
+            </div>                                      
+        </div>
+    </div>
+</section>
+<!--! End of Our Team section -->
+
+<!--  Start of Advisors section -->
+<section class="section is-medium txt-center back-img">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6-desktop">
+                <h1 class="title is-3 has-text-centered has-text-white">Advisors</h1>
+                <p class="subtitle mt-3 has-text-centered">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.</p>
+            </div>
+        </div>
+            <div class="columns mt-5">
+                <div class="column is-one-fifth">
+                    <div class="advisor" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="photo">
+                            <img src="img/Advisors/a1.jpg" alt="a1">
+                        </div>
+                        <div class="info">
+                            <h2 class="title has-text-white">Rafael Agostino</h2>
+                            <p class="subtitle txt-center is-uppercase">board member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <div class="advisor" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="photo">
+                            <img src="img/Advisors/a2.jpg" alt="a1">
+                        </div>
+                        <div class="info">
+                            <h2 class="title has-text-white">Marysa Vosniak</h2>
+                            <p class="subtitle txt-center is-uppercase">board member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <div class="advisor" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="photo">
+                            <img src="img/Advisors/a3.jpg" alt="a1">
+                        </div>
+                        <div class="info">
+                            <h2 class="title has-text-white">Glenn Mitchells</h2>
+                            <p class="subtitle txt-center is-uppercase">board member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <div class="advisor" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="photo">
+                            <img src="img/Advisors/a4.jpg" alt="a1">
+                        </div>
+                        <div class="info">
+                            <h2 class="title has-text-white">Gary Simmons</h2>
+                            <p class="subtitle txt-center is-uppercase">CRYPTO FINANCE ANALYST</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-one-fifth">
+                    <div class="advisor" data-aos="zoom-in" data-aos-duration="2000">
+                        <div class="photo">
+                            <img src="img/Advisors/a5.jpg" alt="a1">
+                        </div>
+                        <div class="info">
+                            <h2 class="title has-text-white">Olga Broniszewska</h2>
+                            <p class="subtitle txt-center is-uppercase">CRYPTO FINANCE ANALYST</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<!--  End of Advisors section -->
+
+<!--! Start of FAQ section -->
+<section class="section txt-center">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6-desktop">
+                <h1 class="title is-3 has-text-centered has-text-white">FAQ</h1>
+                <p class="subtitle mt-3 has-text-centered">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.</p>
+            </div>
+        </div>
+        <!--! Accordion -->
+        <div class="columns px-6">
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-right" data-aos-duration="1900">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-left" data-aos-duration="2000">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns  px-6">
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-right" data-aos-duration="2200">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-left" data-aos-duration="2400">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns  px-6">
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-right" data-aos-duration="2700">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-left" data-aos-duration="2600">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns  px-6">
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-right" data-aos-duration="2800">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6">
+                <div class="accordion"  data-aos="fade-left" data-aos-duration="3000">
+                    <div class="contentbox">
+                        <div class="label">One List</div>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit veniam quos quas temporibus reprehenderit commodi tempore, molestias velit explicabo. Mollitia, quasi impedit? Repudiandae doloremque sed dignissimos dicta consequuntur ratione blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!--! Accordion Java Script-->
+<script>
+    const accordion =document.getElementsByClassName('contentbox');
+    for(i = 0; i<accordion.length ; i++)
+    {
+        accordion[i].addEventListener('click', function()
+        {
+            this.classList.toggle('active')
+        })
+    }
+</script>
+<!--! End of FAQ section -->
+
+<!--  Start of Media & Partners section -->
+<section class="section content-wrapper is-meduim txt-center background-sec background-media-sec">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6-desktop">
+                <h1 class="title title is-3 has-text-centered has-text-white">Media & Partners</h1>
+                <p class="subtitle mt-3 has-text-centered">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.</p>
+            </div>
+        </div>
+
+        <div class="columns is-centered mt-4">
+            <div class="column is-10-desktop">
+                <div class="blog-post mt-5" data-aos="fade-down" data-aos-easing="linear"
+data-aos-duration="900">
+                    <div class="card-photo">
+                        <img src="img/1.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                Blockvhain For Dummies
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/john.jpg" alt="ab-1">
+                                <div class="author-name">by John Cambell</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-post mt-5" data-aos="fade-down" data-aos-easing="linear"
+data-aos-duration="900">
+                    <div class="card-photo">
+                        <img src="img/2.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                The krypton Chain Algorythm
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/sandra.jpg" alt="ab-1">
+                                <div class="author-name">by Sandra Bernard</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-post mt-5" data-aos="fade-down" data-aos-easing="linear"
+data-aos-duration="900">
+                    <div class="card-photo">
+                        <img src="img/1.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                What is Crypto Mining ?
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/lucy.jpg" alt="ab-1">
+                                <div class="author-name">by Lucy Wong</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns mt-6 section">
+            <div class="column">
+                <div class="buttons is-centered">
+                    <a class="button is-responsive is-uppercase btncenter">more articles</a>
+                </div>
+                
+                <div class="column line-ul">
+                    <div class="hero-foot">
+                        <nav class="tabs is-boxed is-centered ">
+                            <div class="container">
+                            <ul>
+                                <li class="pl-5"> <img src="img/clients/bitit.svg" alt="img-c" width="160"></li>
+                                <li class="pl-5"> <img src="img/clients/coin.svg" alt="img-c" width="160"></li>
+                                <li class="pl-5"> <img src="img/clients/cryptomarket.svg" alt="img-c" width="160"></li>
+                            </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--  End of Media & Partners section -->
+
+<!-- start of contact form section -->
+<section class="section is-medium background-form txt-center">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-6-desktop">
+                <h1 class="title is-3 has-text-centered has-text-white">Get in Touch</h1>
+                <p class="subtitle mt-3 has-text-centered txt-center">Viderer malorum sadipscing cum ei. Eu impetus perfecto sit, no sea labore detraxit. Primis mediocrem necessitatibus an vis. Ut sea pertinax perpetua, eruditi volumus quaestio ex mel, has ei tota homero.</p>
+
+                <div class="column is-12-desktop contact-icons ">
+                    <div class="buttons is-centered mt-5">
+                        <button class="button is-responsive icon icon-animation-form">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        <button class="button is-responsive icon icon-animation-form">
+                            <i class="fa-solid fa-envelope"></i>
+                        </button>
+                        <button class="button is-responsive icon icon-animation-form">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+                    <div class="column is-12-desktop">
+                        <div class="field-body mt-6">
+                            <div class="field">
+                                <p class="control">
+                                    <input type="text" id="Name" required>
+                                    <label for="Name">Name</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field-body mt-6">
+                            <div class="field ">
+                                <p class="control ">
+                                    <input type="text" id="Email" required>
+                                    <label for="Email">Email</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field-body mt-6">
+                            <div class="field">
+                                <p class="control">
+                                    <textarea rows="5" required></textarea>
+                                    <label for="Message">Message</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="field-body mt-6">
+                            <div class="field">
+                                <div class="buttons is-centered">
+                                    <a href="Error page/index-2.html" target="_blank" class="button is-responsive is-fullwidth is-uppercase btncenter">send message</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of contact form section -->
+
+<!-- todo: start of footer section -->
+<section class="section background-foot">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-6-desktop">
+                <img src="img/Layer 0.png" alt="logo-2" width="120">
+                <h1 class="title is-4 has-text-centered has-text-white is-uppercase">Bitcoin</h1>
+                <p class="subtitle mt-1 has-text-centered is-uppercase txt-center">Blockchain brought to another level</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns is-desktop footer-column mt-5">
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">token</a></li>
+                        <li><a href="#">ico</a></li>
+                        <li><a href="#">roadmap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="subscribe-block">
+                    <form>
+                        <div class="control">
+                            <input type="email" class="subscribe-input" id="Email">
+                            <button class="button is-rounded is-responsive btn btn-foot">subscribe</button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">register</a></li>
+                        <li><a href="#">media</a></li>
+                        <li><a href="#">telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns mt-6">
+            <div class="column is-12-desktop footer-info">
+                <p class="copyright has-text-centered mb-3">&copy;2022 | BITCOIN.All Rights Reserved</p>
+                <p class="codedBy has-text-centered has-text-white">Designed By <a href="mailto:AzharAbdAl-baqiAl-sharbaji">Azhar Abd Al-baqi Al-sharbaji</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- <img src="img/Background copy 2.png" alt="" width="400" class="footer-backround-img"> -->
+</section>
+<!-- todo: End of footer section -->
+
+
+
+
+
+        <!-- Script of bulma-steps Extensions -->
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({ delay: 700});
+    AOS.refresh();
+    </script>
+
+</body>
+</html>

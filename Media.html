@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Website-Bulma</title>
+    <link rel="icon" href="img/Layer 0.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+<!-- start of navbar -->
+<nav class="navbar pt-2 is-fixed-top is-black" role="navigation" aria-label="main navigation">
+    <div class="container">
+    <div class="navbar-brand">
+        <div class="logo">
+            <h1 class="title is-4 is-uppercase has-text-white">
+            <img src="img/Layer 0.png" width="80">bitcoin</h1>
+        </div>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end is-uppercase">
+            <a href="#" class="navbar-item">token</a>
+            <a href="#" class="navbar-item">ico</a>
+            <a href="Roadmap.html" target="_blank" class="navbar-item">roadmap</a>
+            <a href="Media.html" target="_blank" class="navbar-item">media</a>
+            <a href="#" class="navbar-item">
+                <i class="fa-solid fa-paper-plane pr-1"></i>
+                telegram</a>  
+    
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-responsive" id="openModal">
+                    <span class="text">register</span>
+                    <span class="btn-box"></span>
+                </a>
+                <div class="modal">
+                    <div class="modal-background"></div> <!-- This Background opacity -->
+                    <div class="modal-card animate__animated animate__zoomIn">
+                        <video autoplay muted loop id="back-video">
+                            <source src="pexels-mart-production-7565451 (1).mp4" type="video/mp4">
+                        </video>
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Modal title</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                    <!-- Content ... -->
+                    <div class="steps" id="stepsDemo">
+                        <div class="step-item is-active is-info">
+                            <div class="step-marker">1</div>
+                                <div class="step-details">
+                                    <p class="step-title">Account</p>
+                                </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">3</div>
+                            <div class="step-details">
+                            <p class="step-title">Social</p>
+                            </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">4</div>
+                            <div class="step-details">
+                            <p class="step-title">Finish</p>
+                            </div>
+                        </div>
+                        <div class="steps-content">
+                            <div class="step-content has-text-centered is-active">
+                            <div class="field is-horizontal">
+                                <div class="field-ormal">
+                                    
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                        <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal">
+                                    
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control has-icon has-icon-right">
+                                        <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                            <input class="input" name="firstname" id="firstname" type="text" placeholder="Firstname" autofocus data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control has-icon has-icon-right">
+                                            <input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control has-icon has-icon-right">
+                                            <input class="input" type="email" name="email" id="email" placeholder="Email" data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                                <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control social-icon">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <i class="fa-brands fa-telegram"></i>
+                                                <i class="fa-brands fa-twitter"></i>
+                                                <i class="fa-brands fa-github"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="step-content has-text-centered">
+                            <h1 class="title is-4 has-text-white py-6">Your account is now created!</h1>
+                        </div>
+                        </div>
+                        <div class="steps-actions">
+                            <div class="steps-action">
+                                <a href="#" data-nav="previous" id="previous" class="button is-light is-responsive is-rounded">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                    Previous</a>
+                            </div>
+                            <div class="steps-action">
+                                <a href="#" data-nav="next" id="next" class="button is-light is-responsive is-rounded">Next
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <a  href="Error page/index.html" target="_blank">
+                            <button class="button is-success is-responsive">Save changes</button></a> 
+                        <button class="button modal-btn is-responsive ml-3" id="cancel">Cancel</button>
+                    </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</nav>
+        <script>
+            $('#openModal').click(function(){
+                $('.modal').addClass('is-active');
+            })
+        
+            $('.delete').click(function(){
+                $('.modal').removeClass('is-active');
+            })
+            $('#cancel').click(function(){
+                $('.modal').removeClass('is-active');
+            })
+            $('.modal-background').click(function () {
+                $('.modal').removeClass('is-active')
+            })
+        
+            bulmaSteps.attach();
+        
+        </script>
+<!-- End of navbar -->
+
+<!-- * start of hero media section -->
+<section class="hero is-fullheight-with-navbar txt-left mt-6">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-5 is-offset-1">
+                    <h1 class="title is-1 has-text-white is-spaced is-light is-semibold main-title">News & Media</h1>
+                    <p class="subtitle ">Cryptocurrency brought to the next level. Join our ICO for supercharged rates.</p>
+                </div>
+                <div class="column is-6 is-offset-1">
+                    <figure class="image">
+                        <img src="img/media.svg" alt="m-1" width="700">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- * End of hero media section -->
+
+<!-- start media comments section -->
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-9-desktop">
+                <div class="blog-post mt-6">
+                    <div class="card-photo">
+                        <img src="img/1.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                Blockvhain For Dummies
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/john.jpg" alt="ab-1">
+                                <div class="author-name">by John Cambell</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-post mt-6">
+                    <div class="card-photo">
+                        <img src="img/2.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                The krypton Chain Algorythm
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/sandra.jpg" alt="ab-1">
+                                <div class="author-name">by Sandra Bernard</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="blog-post mt-6">
+                    <div class="card-photo">
+                        <img src="img/1.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                What is Crypto Mining ?
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/lucy.jpg" alt="ab-1">
+                                <div class="author-name">by Lucy Wong</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-post mt-6">
+                    <div class="card-photo">
+                        <img src="img/1.png" alt="c-1">
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <h2 class="title is-5 has-text-white">
+                                Featured On Bit It
+                                <span class="side-datetime">22.8.2022</span>
+                            </h2>
+                            <p class="txt-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem labore tempore dicta cumque perferendis sequi quibusdam ea?</p>
+                        </div>
+                        <div class="post-meta">
+                            <div class="author-block">
+                                <img src="img/team/lucy.jpg" alt="ab-1">
+                                <div class="author-name">by Lucy Wong</div>
+                            </div>
+                            <div class="stats-block">
+                                <div class="like"><i class="fa-solid fa-thumbs-up"></i>35</div>
+                                <div class="comment"><i class="fa-solid fa-comment"></i>40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="buttons is-centered my-5">
+                    <button class="button is-fullwidth is-centered mt-2 mb-6 is-uppercase btn-load-more">load more</button>
+                </div>
+            </div>
+
+            <div class="columns">
+                <div class="column is-9-desktop is-offset-3">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control">
+                                <input type="text">
+                                <label for="Name">Search article</label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="categories-widget">
+                        <div class="widget-title is-uppercase my-5">
+                            categories
+                        </div>
+                        <ul class="categories-list is-capitalized">
+                            <li> <a href="#"> 
+                                <span>all posts</span> 
+                                <span class="tag">53</span> 
+                            </a></li>
+                            <li> <a href="#"> blockchain</a></li>
+                            <li> <a href="#"> crypto market</a></li>
+                            <li> <a href="#"> cryptomining</a></li>
+                            <li> <a href="#"> featured</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="tags-widget">
+                        <div class="widget-title is-uppercase my-5">tags</div>
+                        <div class="tags">
+                            <span class="tag">Bitcoin</span>
+                            <span class="tag">Cryptocurrency</span> 
+                                <div class="tag-Collection-2">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Ethereum</span>
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="drowpdown-widget">
+                        <div class="drowpdown-title is-uppercase my-5">archives</div>
+                            <div class="dropdown">
+                                <div class="dropdown-trigger">
+                                    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                    <span>Select Month</span>
+                                        <span class="icon is-small">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                                    <div class="dropdown-content">
+                                        <div class="dropdown-item">
+                                            January
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div class="dropdown-item">
+                                            February
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            April
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            May
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            June
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            July
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            August
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            September
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            October
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            November
+                                        </div>
+                                    <hr class="dropdown-divider">
+                                        <div href="#" class="dropdown-item">
+                                            December
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End media comments section -->
+
+
+<script>
+// Get all dropdowns on the page that aren't hoverable.
+const dropdowns = document.querySelectorAll('.dropdown:not(.is-hoverable)');
+
+    if (dropdowns.length > 0) {
+    // For each dropdown, add event handler to open on click.
+    dropdowns.forEach(function(el) {
+    el.addEventListener('click', function(e) {
+        e.stopPropagation();
+        el.classList.toggle('is-active');
+    });
+    });
+
+    // If user clicks outside dropdown, close it.
+    document.addEventListener('click', function(e) {
+    closeDropdowns();
+    });
+    }
+
+    /* * Close dropdowns by removing `is-active` class.*/
+    function closeDropdowns() {
+    dropdowns.forEach(function(el) {
+    el.classList.remove('is-active');
+    });
+    }
+
+    // Close dropdowns if ESC pressed
+    document.addEventListener('keydown', function (event) {
+    let e = event || window.event;
+        if (e.key === 'Esc' || e.key === 'Escape') {
+    closeDropdowns();
+    }
+    });
+</script>
+
+
+
+<!-- todo: start of footer section -->
+<section class="section background-foot">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-6-desktop">
+                <img src="img/Layer 0.png" alt="logo-2" width="120">
+                <h1 class="title is-4 has-text-centered has-text-white is-uppercase">Bitcoin</h1>
+                <p class="subtitle mt-1 has-text-centered is-uppercase txt-center">Blockchain brought to another level</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns is-desktop footer-column mt-5">
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">token</a></li>
+                        <li><a href="#">ico</a></li>
+                        <li><a href="#">roadmap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="subscribe-block">
+                    <form>
+                        <div class="control">
+                            <input type="email" class="subscribe-input" id="Email">
+                            <button class="button is-rounded is-responsive btn btn-foot">subscribe</button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">register</a></li>
+                        <li><a href="#">media</a></li>
+                        <li><a href="#">telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns mt-6">
+            <div class="column is-12-desktop footer-info">
+                <p class="copyright has-text-centered mb-3">&copy;2022 | BITCOIN.All Rights Reserved</p>
+                <p class="codedBy has-text-centered has-text-white">Designed By <a href="mailto:AzharAbdAl-baqiAl-sharbaji">Azhar Abd Al-baqi Al-sharbaji</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- todo: End of footer section -->
+
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitcoin Website-Bulma</title>
+    <link rel="icon" href="img/Layer 0.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="bulma-extensions/bulma-timeline.min.css">
+
+            <!-- Aos animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="main.js"></script>
+
+</head>
+<body>
+
+<!-- start of navbar -->
+<nav class="navbar pt-2 is-fixed-top is-black" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <div class="logo">
+                <h1 class="title is-4 is-uppercase has-text-white">
+                <img src="img/Layer 0.png" width="80">bitcoin</h1>
+            </div>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end is-uppercase">
+            <a href="#" class="navbar-item">token</a>
+            <a href="#" class="navbar-item">ico</a>
+            <a href="Roadmap.html" target="_blank" class="navbar-item">roadmap</a>
+            <a href="Media.html" target="_blank" class="navbar-item">media</a>
+            <a href="#" class="navbar-item">
+                <i class="fa-solid fa-paper-plane pr-1"></i>
+                telegram</a>  
+    
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-responsive" id="openModal">
+                    <span class="text">register</span>
+                    <span class="btn-box"></span>
+                </a>
+                <div class="modal">
+                    <div class="modal-background"></div> <!-- This Background opacity -->
+                    <div class="modal-card animate__animated animate__zoomIn">
+                        <video autoplay muted loop id="back-video">
+                            <source src="pexels-mart-production-7565451 (1).mp4" type="video/mp4">
+                        </video>
+                    <header class="modal-card-head">
+                        <p class="modal-card-title">Modal title</p>
+                        <button class="delete" aria-label="close"></button>
+                    </header>
+                    <section class="modal-card-body">
+                    <!-- Content ... -->
+                    <div class="steps" id="stepsDemo">
+                        <div class="step-item is-active is-info">
+                            <div class="step-marker">1</div>
+                                <div class="step-details">
+                                    <p class="step-title">Account</p>
+                                </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">3</div>
+                            <div class="step-details">
+                            <p class="step-title">Social</p>
+                            </div>
+                        </div>
+                        <div class="step-item is-info">
+                            <div class="step-marker">4</div>
+                            <div class="step-details">
+                            <p class="step-title">Finish</p>
+                            </div>
+                        </div>
+                        <div class="steps-content">
+                            <div class="step-content has-text-centered is-active">
+                            <div class="field is-horizontal">
+                                <div class="field-ormal">
+                                    
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                        <input class="input" name="username" id="username" type="text" placeholder="Username" autofocus data-validate="require">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal">
+                                    
+                                </div>
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control has-icon has-icon-right">
+                                        <input class="input" type="password" name="password" id="password" placeholder="Password" data-validate="require">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control">
+                                            <input class="input" name="firstname" id="firstname" type="text" placeholder="Firstname" autofocus data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control has-icon has-icon-right">
+                                            <input class="input" type="text" name="lastname" id="lastname" placeholder="Last name" data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control has-icon has-icon-right">
+                                            <input class="input" type="email" name="email" id="email" placeholder="Email" data-validate="require">
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="step-content has-text-centered">
+                                <div class="field is-horizontal">
+                                <div class="is-normal"></div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <div class="control social-icon">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <i class="fa-brands fa-telegram"></i>
+                                                <i class="fa-brands fa-twitter"></i>
+                                                <i class="fa-brands fa-github"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="step-content has-text-centered">
+                            <h1 class="title is-4 has-text-white py-6">Your account is now created!</h1>
+                        </div>
+                        </div>
+                        <div class="steps-actions">
+                            <div class="steps-action">
+                                <a href="#" data-nav="previous" id="previous" class="button is-light is-responsive is-rounded">
+                                    <i class="fa-solid fa-angles-left"></i>
+                                    Previous</a>
+                            </div>
+                            <div class="steps-action">
+                                <a href="#" data-nav="next" id="next" class="button is-light is-responsive is-rounded">Next
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    </section>
+                    <footer class="modal-card-foot">
+                        <a  href="Error page/index.html" target="_blank">
+                            <button class="button is-success is-responsive">Save changes</button></a> 
+                        <button class="button modal-btn is-responsive ml-3" id="cancel">Cancel</button>
+                    </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</nav>
+<!-- End of navbar -->
+        
+        <script>
+            $('#openModal').click(function(){
+                $('.modal').addClass('is-active');
+            })
+        
+            $('.delete').click(function(){
+                $('.modal').removeClass('is-active');
+            })
+            $('#cancel').click(function(){
+                $('.modal').removeClass('is-active');
+            })
+            $('.modal-background').click(function () {
+                $('.modal').removeClass('is-active')
+            })
+        
+            bulmaSteps.attach();
+        
+        </script>
+
+
+<!--* start of hero section -->
+<section class="hero is-fullheight-with-navbar is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-desktop">
+                    <img src="img/world.svg" alt="world-img" width="300" 
+                    style="margin: 0 auto; display:block;">
+
+                        <h1 class="title is-2 has-text-centered">2021 Roadmap</h1>
+                            <p class="subtitle mt-3 subtitle-roadmap">Cryptocurrency brought to the next level. Join our ICO for supercharged rates.</p>
+                    <div class="buttons is-centered">
+                        <button class="button is-centered mt-2 mb-6 is-uppercase btn-more-details">more details</button>
+                    </div>
+
+            <div class="timeline is-centered">
+                <div class="timeline-item is-link">
+                    <div class="timeline-marker is-link"></div>
+                        <div class="timeline-content" 
+                        data-aos="fade-left" data-aos-duration="1100" data-aos-mirror="true">
+                            <p class="title is-5 has-text-white my-3">Platform Launch</p>
+                                <time class="subtitle subtitle-time">January 16th</time>
+                            <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                            <a href="#" class="link-timeline">READ TECHPAPER</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-right" 
+                            data-aos="fade-right" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">Presales starts</p>
+                                    <time class="subtitle-time">February 28th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ WHITEPAPER</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-left rightbox" data-aos="fade-left" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">ICO starts</p>
+                                    <time class="subtitle subtitle-time">January 16th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ TECHPAPER</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-right" 
+                            data-aos="fade-right" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">ICO phase 2</p>
+                                    <time class="subtitle-time">April 20th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ WHITEPAPER</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-left" 
+                            data-aos="fade-left" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">Development starts</p>
+                                    <time class="subtitle subtitle-time">May 9th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ WHITEPAPER</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-right" 
+                            data-aos="fade-right" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">Krypton Meetup CA</p>
+                                    <time class="subtitle-time">June 30th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ DETAIS</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"></div>
+                            <div class="timeline-content triangle-dir-left" 
+                            data-aos="fade-left" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">Krypton Wallet Release</p>
+                                    <time class="subtitle subtitle-time">Jule 25th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ DETAIS</a>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item is-link">
+                            <div class="timeline-marker is-link"  data-aos="fade-right"></div>
+                            <div class="timeline-content triangle-dir-right" 
+                            data-aos="fade-right" data-aos-duration="1100" data-aos-mirror="true">
+                                <p class="title is-5 has-text-white my-3">Chain Alpha Release</p>
+                                    <time class="subtitle-time">Jule 25th</time>
+                                <p class="text-timeline py-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#" class="link-timeline">READ DETAIS</a>
+                            </div>
+                        </div>
+                            <div class="timeline-item is-link">
+                                <div class="timeline-marker is-link"></div>
+                            </div>
+
+                        <div class="roadmap-end-img">
+                            <img src="img/roadmap-end.svg" alt="world-img" width="400">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--* End of hero section -->
+
+<!-- start of Icons contact Section -->
+<section class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-6-desktop">
+                <div class="icons icons-contact">
+                    <i class="fa-brands has-text-centered fa-gitlab"></i>
+                    <i class="fa-brands has-text-centered fa-facebook-messenger"></i>
+                    <i class="fa-brands has-text-centered fa-linkedin"></i>
+                    <i class="fa-solid  has-text-centered fa-paper-plane"></i>
+                    <i class="fa-brands has-text-centered fa-twitter"></i>
+                    <i class="fa-brands has-text-centered fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Icons contact Section -->
+
+
+
+
+
+<!-- todo: start of footer section -->
+<section class="section background-foot">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-6-desktop">
+                <img src="img/Layer 0.png" alt="logo-2" width="120">
+                <h1 class="title is-4 has-text-centered has-text-white is-uppercase">Bitcoin</h1>
+                <p class="subtitle mt-1 has-text-centered is-uppercase txt-center">Blockchain brought to another level</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="columns is-desktop footer-column mt-5">
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">token</a></li>
+                        <li><a href="#">ico</a></li>
+                        <li><a href="#">roadmap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="subscribe-block">
+                    <form>
+                        <div class="control">
+                            <input type="email" class="subscribe-input" id="Email">
+                            <button class="button is-rounded is-responsive btn btn-foot">subscribe</button>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+            <div class="column is-4-desktop ">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#">register</a></li>
+                        <li><a href="#">media</a></li>
+                        <li><a href="#">telegram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="columns mt-6">
+            <div class="column is-12-desktop footer-info">
+                <p class="copyright has-text-centered mb-3">&copy;2022 | BITCOIN.All Rights Reserved</p>
+                <p class="codedBy has-text-centered has-text-white">Designed By <a href="mailto:AzharAbdAl-baqiAl-sharbaji">Azhar Abd Al-baqi Al-sharbaji</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- todo: End of footer section -->
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    AOS.refresh();
+    </script>
+</body>
+</html>
