@@ -1,16 +1,3 @@
-    
-    // if( $(".pageloader").length)
-    // {
-    //     $(".pageloader").toggleClass("is-active");
-    //     $(window).on("load", function(){
-    //         var pageloaderTimaout = setTimeout( function (){
-    //             $(".pageloader").toggleClass("is-active");
-    //             $("#infraloader").toggleClass("is-active");
-    //             clearTimeout(pageloaderTimaout);
-    //         } , 700)
-    //     });
-    // }
-
 
     //! navbar js toggle script  start
     document.addEventListener('DOMContentLoaded', () => 
@@ -79,7 +66,7 @@ function showTime()
         if(seconds < 10)
         {  seconds = '0' + seconds; }
 
-    document.getElementById('hours').textContent =  hours + '';
+    document.getElementById('hours').textContent =  hours + ' ';
     document.getElementById('minutes').textContent = minutes +' ';
     document.getElementById('seconds').textContent = seconds ;
 }
